@@ -1,0 +1,39 @@
+{
+  "name": "mcp-server-generator",
+  "version": "0.1.0",
+  "description": "CLI tool: generate MCP servers from OpenAPI specs",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli/index.ts",
+    "start": "node dist/cli/index.js",
+    "lint": "eslint . --ext .ts",
+    "test": "vitest",
+    "test:run": "vitest --run",
+    "test:ui": "vitest --ui",
+    "test:sample": "node test.mjs"
+  },
+  "bin": {
+    "mcp-generate": "./dist/cli/index.js"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
+    "swagger2openapi": "^7.0.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.0.0",
+    "js-yaml": "^4.1.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
